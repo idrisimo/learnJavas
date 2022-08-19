@@ -1,19 +1,26 @@
 import java.util.Scanner;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
+        String fizz = "fizz";
+        String buzz = "buzz";
+        String fizz_buzz = fizz.concat(buzz); 
+        int multiple_of_three = 3;
+        int multiple_of_five = 5;
 
-        int[] newArr = new int[3];
-        newArr[0] = 1;
-        newArr[1] = 2;
-        newArr[2] = 3;
-        
-        int x = newArr[0];
-        System.out.println(x);
-
-        int[] nums = {1,2,3};
-        System.out.println(nums[1]);
-        
+        for (int i = 1; i <= 100; i++) {
+            if(i % multiple_of_three == 0 && i % multiple_of_five == 0) {
+                System.out.println(fizz_buzz);
+            } else if (i % multiple_of_five == 0) {
+                System.out.println(buzz);
+            } else if (i % multiple_of_three == 0 ) {
+                System.out.println(fizz);
+            } else {
+                System.out.println(i);
+            }
+        }
 
     }
 }
